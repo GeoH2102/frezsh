@@ -65,11 +65,6 @@ if command -v fzf &> /dev/null; then
     source <(fzf --zsh 2>/dev/null) || true
 fi
 
-# Atuin (better shell history with sync)
-if command -v atuin &> /dev/null; then
-    eval "$(atuin init zsh)"
-fi
-
 # ----- Aliases -----
 
 # Modern replacements (only if installed)
@@ -102,7 +97,12 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
 
-# ----- Starship Prompt (load last) -----
+# ----- Starship Prompt -----
 if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"
+fi
+
+# ----- Atuin (load last to ensure Ctrl+R binding) -----
+if command -v atuin &> /dev/null; then
+    eval "$(atuin init zsh)"
 fi
