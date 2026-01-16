@@ -65,6 +65,11 @@ if command -v fzf &> /dev/null; then
     source <(fzf --zsh 2>/dev/null) || true
 fi
 
+# Atuin (better shell history with sync)
+if command -v atuin &> /dev/null; then
+    eval "$(atuin init zsh)"
+fi
+
 # ----- Aliases -----
 
 # Modern replacements (only if installed)

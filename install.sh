@@ -55,6 +55,13 @@ if ! command -v zoxide &> /dev/null; then
     success "zoxide installed"
 fi
 
+# Install Atuin (shell history)
+if ! command -v atuin &> /dev/null; then
+    info "Installing Atuin..."
+    curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+    success "Atuin installed"
+fi
+
 # Install chezmoi
 if ! command -v chezmoi &> /dev/null; then
     info "Installing chezmoi..."

@@ -19,6 +19,7 @@ Modern zsh configuration managed with [chezmoi](https://chezmoi.io).
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | grep | Faster grep |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | Smarter directory jumping |
 | [fzf](https://github.com/junegunn/fzf) | - | Fuzzy finder |
+| [atuin](https://atuin.sh) | Ctrl+R | Shell history with sync |
 
 ## Installation
 
