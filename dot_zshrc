@@ -55,9 +55,9 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case insensitive
 
 # ----- Modern Tool Integrations -----
 
-# Zoxide (smart cd)
+# Zoxide (smart cd, replaces cd)
 if command -v zoxide &> /dev/null; then
-    eval "$(zoxide init zsh)"
+    eval "$(zoxide init zsh --cmd cd)"
 fi
 
 # FZF (fuzzy finder)
