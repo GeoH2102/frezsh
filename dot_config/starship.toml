@@ -1,0 +1,90 @@
+# Starship Prompt Configuration
+# https://starship.rs/config/
+
+# Timeout for commands (ms)
+command_timeout = 500
+
+# Newline between prompts
+add_newline = true
+
+# Prompt format
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$docker_context\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+style = "bold blue"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = ""
+style = "bold purple"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold yellow"
+conflicted = "="
+ahead = "^${count}"
+behind = "v${count}"
+diverged = "^${ahead_count}v${behind_count}"
+untracked = "?${count}"
+stashed = "*"
+modified = "!${count}"
+staged = "+${count}"
+deleted = "x${count}"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "bold yellow"
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+symbol = "py "
+style = "bold yellow"
+
+[nodejs]
+format = "[$symbol($version)]($style) "
+symbol = "node "
+style = "bold green"
+
+[rust]
+format = "[$symbol($version)]($style) "
+symbol = "rs "
+style = "bold red"
+
+[golang]
+format = "[$symbol($version)]($style) "
+symbol = "go "
+style = "bold cyan"
+
+[docker_context]
+format = "[$symbol$context]($style) "
+symbol = "docker "
+style = "bold blue"
+only_with_files = true
+
+# Disabled modules (enable as needed)
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[kubernetes]
+disabled = true
