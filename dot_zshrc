@@ -3,7 +3,7 @@
 
 # ----- Environment -----
 export PATH="$HOME/.local/bin:$PATH"
-export EDITOR="${EDITOR:-vim}"
+export EDITOR="nano"
 export VISUAL="$EDITOR"
 
 # ----- Zinit Plugin Manager -----
